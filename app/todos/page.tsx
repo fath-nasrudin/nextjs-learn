@@ -9,7 +9,9 @@ export default async function Todos() {
   return (
     <div>
       <h1>Todos</h1>
-      <Button>Hello</Button>
+      <Button href="https://google.com" intent="primary" block>
+        Hello
+      </Button>
       <p>{JSON.stringify(todos, null, 2)}</p>
     </div>
   );
