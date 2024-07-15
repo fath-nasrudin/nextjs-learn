@@ -12,6 +12,13 @@ export default async function Todos() {
       <Button href="https://google.com" intent="primary" block>
         Hello
       </Button>
+      <Button href="https://google.com">Hello</Button>
+      <Button href="https://google.com" intent="secondary">
+        Hello
+      </Button>
+      <Button href="https://google.com" intent="primary">
+        Hello
+      </Button>
       <p>{JSON.stringify(todos, null, 2)}</p>
     </div>
   );

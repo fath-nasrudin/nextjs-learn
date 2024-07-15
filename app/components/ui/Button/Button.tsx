@@ -6,7 +6,7 @@ const buttonStyles = cva("px-4 py-0.5 text-sm rounded cursor-pointer", {
     intent: {
       default: "border border-gray-400",
       primary: "bg-brand text-white",
-      secondary: "",
+      secondary: "bg-gray-700 text-white",
     },
     block: {
       true: "block",
