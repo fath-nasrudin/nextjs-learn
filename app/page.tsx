@@ -1,6 +1,11 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [count, setCount] = useState(0);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -56,6 +61,24 @@ export default function Home() {
             Find in-depth information about Next.js features and API.
           </p>
         </a>
+
+        <div className="flex gap-4 justify-center items-center">
+          <button
+            className="px-8 py-2 hover:border border-neutral-400/0 bg-neutral-800/30 hover:border-neutral-700"
+            onClick={() => setCount((prev) => prev - 1)}
+          >
+            -
+          </button>
+          <p>{count}</p>
+          <button
+            className="px-8 py-2 hover:border border-transparent bg-neutral-800/30 hover:border-neutral-700"
+            onClick={() => setCount((prev) => prev + 1)}
+          >
+            +
+          </button>
+        </div>
+
+        <Link href="/todos">Todos</Link>
 
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
